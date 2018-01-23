@@ -1,0 +1,88 @@
+TRUNCATE TABLE `jos_category_list`;
+TRUNCATE TABLE `jos_customers`;
+TRUNCATE TABLE `jos_products` ;
+TRUNCATE TABLE `jos_royalty_booklet_items`;
+TRUNCATE TABLE `jos_royalty_booklets`;
+TRUNCATE TABLE `jos_salesmans`;
+
+ALTER TABLE `jos_sales_invoice` CHANGE `gst_amount` `gst_amount` DECIMAL(15,2) NOT NULL;
+ALTER TABLE `jos_purchase` ADD `status` INT NOT NULL AFTER `total_amount`, ADD `amount_paid` DECIMAL(15,2) NOT NULL AFTER `status`;
+ALTER TABLE `jos_sales_invoice` CHANGE `loading_rent_id` `loading_transproter_id` INT(11) NOT NULL;
+ALTER TABLE `jos_sales_invoice` CHANGE `loading_id` `loading_type` INT(11) NOT NULL, CHANGE `royalty_id` `royalty_type` INT(11) NOT NULL;
+
+ALTER TABLE `jos_sales_invoice` ADD `main_items_total_amount` DECIMAL(15,2) NOT NULL AFTER `customer_id`, ADD `mixing_items_total_amount` DECIMAL(15,2) NOT NULL AFTER `main_items_total_amount`;
+
+ALTER TABLE `jos_sales_invoice` CHANGE `bill_chalan_no` `bill_challan_no` INT(11) NOT NULL;
+
+
+
+
+---------------------------
+
+ALTER TABLE `jos_sales_invoice` CHANGE `royalty_name` `royalty_id` INT NOT NULL;
+
+ALTER TABLE `jos_royalty_booklets` CHANGE `matric_tn` `quantity` DECIMAL(10,2) NOT NULL;
+
+ALTER TABLE `jos_sales_invoice` ADD `royalty_type1` INT NOT NULL AFTER `party_id`, ADD `royalty_mt1` DECIMAL(10,2) NOT NULL AFTER `royalty_type1`, ADD `royalty_no1` INT(15) NOT NULL AFTER `royalty_mt1`, ADD `royalty_rate1` DECIMAL(10,2) NOT NULL AFTER `royalty_no1`, ADD `party_id1` INT NOT NULL AFTER `royalty_rate1`; 
+
+ALTER TABLE `jos_sales_invoice` CHANGE `loading_amount` `loading_amount` DECIMAL(15,2) NOT NULL, CHANGE `royalty_mt` `royalty_mt` DECIMAL(15,2) NOT NULL, CHANGE `royalty_no` `royalty_no` VARCHAR(50) NOT NULL, CHANGE `royalty_rate` `royalty_rate` DECIMAL(15,2) NOT NULL, CHANGE `royalty_mt1` `royalty_mt1` DECIMAL(15,2) NOT NULL, CHANGE `royalty_rate1` `royalty_rate1` DECIMAL(15,2) NOT NULL, CHANGE `waiverage_charges` `waiverage_charges` DECIMAL(15,2) NOT NULL; 
+
+
+---------------------------------
+
+
+ALTER TABLE `jos_sales_invoice_items` CHANGE `product_item_id` `product_id` INT(11) NOT NULL, CHANGE `product_mt` `quantity` DECIMAL(10,2) NOT NULL;
+
+ALTER TABLE `jos_sales_invoice` ADD `bill_no` INT NOT NULL AFTER `time`; 
+
+ALTER TABLE `jos_products` CHANGE `gst_code` `hsn_code` VARCHAR(100) NOT NULL; 
+
+----------------------------------
+
+ALTER TABLE `jos_sales_invoice` CHANGE `vehicle_rent_rate` `vehicle_rate` DECIMAL(10,2) NOT NULL; 
+
+-------------------------------------
+
+ALTER TABLE `jos_sales_invoice` ADD `total_weight` DECIMAL(15,2) NOT NULL AFTER `mixing_weight`, ADD `gross_amount` DECIMAL(15,2) NOT NULL AFTER `total_weight`; 
+
+ALTER TABLE `jos_sales_invoice_items` ADD `actual_weight` DECIMAL(15,2) NOT NULL AFTER `quantity`, ADD `mixing_weight` DECIMAL(15,2) NOT NULL AFTER `actual_weight`, ADD `total_weight` DECIMAL(15,2) NOT NULL AFTER `mixing_weight`;
+
+
+--------------------------------
+
+
+ALTER TABLE `jos_sales_invoice` DROP `main_items_total_amount`, DROP `mixing_items_total_amount`; 
+
+ALTER TABLE `jos_sales_invoice` ADD `total_weight` DECIMAL(15,2) NOT NULL AFTER `customer_id`, ADD `gross_amount` DECIMAL(15,2) NOT NULL AFTER `total_weight`; 
+
+ALTER TABLE `jos_sales_invoice_items` ADD `actual_weight` DECIMAL(15,2) NOT NULL AFTER `quantity`, ADD `mixing_weight` DECIMAL(15,2) NOT NULL AFTER `actual_weight`, ADD `total_weight` DECIMAL(15,2) NOT NULL AFTER `mixing_weight`;
+
+-----------------------------------
+
+
+ALTER TABLE `jos_cash_expenses` ADD `expense_head_id` INT NOT NULL AFTER `expense_date`; 
+
+------------------------------------
+17/1/18
+
+ALTER TABLE `jos_sales_invoice` ADD `vehicle_rent_rate` DECIMAL(15,2) NOT NULL AFTER `driver_license_no`;
+
+
+17/1/18
+ALTER TABLE `jos_sales_invoice` CHANGE `vehicle_rate` `vehicle_rate_per_mt` DECIMAL(10,2) NOT NULL;
+
+ALTER TABLE `jos_sales_invoice` ADD `vehicle_rate` DECIMAL(15,2) NOT NULL AFTER `net_weight`;
+
+19/1/18
+ALTER TABLE `jos_sales_orders` ADD `transportation_rate` DECIMAL(15,2) NOT NULL AFTER `total_amount`;
+ALTER TABLE `jos_vehicles` CHANGE `owner_name` `transporter_id` INT(11) NOT NULL;
+
+20/1/18
+ALTER TABLE `jos_purchase` ADD `sales_invoice_id` INT(11) NOT NULL AFTER `royalty_purchase_id`;
+
+//optional queries
+ALTER TABLE `jos_purchase_items` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `jos_purchase` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+
+22/1/18
+ALTER TABLE `jos_sales_invoice` ADD `diesel_supplier_id` INT(11) NOT NULL AFTER `add_cash`;

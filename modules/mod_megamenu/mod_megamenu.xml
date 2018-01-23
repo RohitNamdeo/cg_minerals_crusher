@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<extension type="module" version="3.3" client="site" method="upgrade">
+    <name>Mega Menu</name>
+    <author>Kragos Technologies</author>
+    <creationDate>Jul 2015</creationDate>
+    <copyright>Copyright (C) 2011 Kragos Technologies. All rights reserved.</copyright>
+    <license>Commercial</license>
+    <authorEmail>contact@kragos.com</authorEmail>
+    <authorUrl>www.kragos.com</authorUrl>
+    <version>3.3.6</version>
+    <description>Multi Level Mega Menu</description>
+    <files>
+        <filename module="mod_megamenu">mod_megamenu.php</filename>
+    </files>
+</extension>

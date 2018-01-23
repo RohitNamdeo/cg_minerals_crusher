@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.3" method="upgrade">
+	<name>com_twolevelmenu</name>
+	<author></author>
+	<creationDate></creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>3.3.6</version>
+	<description></description>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>twolevelmenu.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+    </files>
+	<languages folder="site">
+	</languages>
+    <administration>
+    </administration>
+</extension>

@@ -1,0 +1,220 @@
+img.icon
+{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;      
+}
+img.delete
+{
+    background: url('../graphics/icons/16x16/delete.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+img.tick
+{
+    background: url('../graphics/icons/16x16/tick.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+img.user
+{
+    background: url('../graphics/icons/16x16/user.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+img.blank_16
+{
+    background: url('../graphics/icons/blank.gif') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+img.exclamation
+{
+    background: url('../graphics/icons/16x16/exclamation.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+img.critical
+{
+    background: url('../graphics/icons/16x16/critical.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+img.edit
+{
+	background: url('../graphics/icons/16x16/edit.png') center center no-repeat;
+	height: 16px;
+	width: 16px;
+    cursor: pointer;
+}
+img.print
+{
+    background: url('../graphics/icons/16x16/print.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+img.attachments
+{
+    background: url('../graphics/icons/16x16/attachment.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;      
+}
+img.view
+{
+    background: url('../graphics/icons/16x16/view.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;      
+}
+img.flagged_mail
+{
+    background: url('../graphics/icons/16x16/star.png') center center no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;      
+}
+img.maybeflagged
+{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;      
+}
+
+img.firstpage
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') 0px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+img.prevpage
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') -24px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+img.nextpage
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') -48px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+img.lastpage
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') -72px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+
+img.firstpage_disabled
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') -96px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+img.prevpage_disabled
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') -120px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+img.nextpage_disabled
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') -144px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+img.lastpage_disabled
+{
+    height: 24px;
+    width: 24px;
+    background: url('../graphics/icons/navigation_controls_24.png') -168px 0px no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+img.spreadsheet
+{
+    height: 16px;
+    width: 16px;
+    background: url('../graphics/icons/16x16/spreadsheet.png') center center no-repeat;
+    cursor: pointer;      
+    vertical-align: middle;
+}
+/*Progress bar*/
+.progress_bar
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AAAAAA;
+    border-radius: 4px 4px 4px 4px;
+    overflow: hidden;
+}
+.progress_bar div 
+{
+    background-image: url("../graphics/pbar-ani.gif");
+    border-right: 1px solid #AAAAAA;
+}
+#progressBar 
+{
+    height: 22px;
+    margin-left: 50px;
+    width: 400px;
+}
+#progressBar div 
+{
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 100%;
+    line-height: 22px;
+    text-align: right;
+    width: 0;
+}
+/*End Progress bar*/ 
+input[type=text]
+{
+    padding: 2px 1px; border: 1px solid #7F9DB9;
+}
+
+textarea
+{
+    padding: 2px 1px; border: 1px solid #7F9DB9;
+}
+
+input[type=password]
+{
+    padding: 2px 1px; border: 1px solid #7F9DB9;
+}
+
+.clickedRow{
+    /*background-color: beige;*/
+    background-color: #2a9de1;
+    color: white;
+}
+
+.clickedRow a{
+    color: white;
+}
+
+.clickedRow a:hover{
+    color: black;
+}

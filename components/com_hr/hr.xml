@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.6" method="upgrade">
+	<name>com_hr</name>
+	<author>None</author>
+	<creationDate>None</creationDate>
+	<copyright>Commercial</copyright>
+	<license>Commercial</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>3.6</version>
+	<description>None</description>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>hr.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+	</languages>
+    <administration>
+        <files folder="admin">
+        </files>
+        <languages folder="admin">
+        </languages>
+    </administration>
+</extension>
