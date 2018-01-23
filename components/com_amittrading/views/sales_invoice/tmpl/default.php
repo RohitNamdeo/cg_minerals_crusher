@@ -808,6 +808,7 @@
     }
    
 </style>
+<h1>Sales Invoice 1111111111111</h1>
 <h1>Sales Invoice</h1>
 <form method="post" action="index.php?option=com_amittrading&task=save_sales_invoice" id="sales_invoice" target="_blank">
 <div style="width:100%;">
