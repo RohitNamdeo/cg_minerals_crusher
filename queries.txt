@@ -90,3 +90,4 @@ ALTER TABLE `jos_sales_invoice` ADD `diesel_supplier_id` INT(11) NOT NULL AFTER 
 
 
 ======================= chonti kandi ==========================
+================ second chonti =================
